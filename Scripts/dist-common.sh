@@ -281,10 +281,10 @@ function build()
         cd "$BUILDROOT"
 
 	# The latest sigutils is now on master
-        try "Cloning sigutils (${BRANCH})..."          git clone --recurse-submodules -b master https://github.com/BatchDrake/sigutils
-        try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/suscan
-        try "Cloning SuWidgets (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/SuWidgets
-        try "Cloning SigDigger (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/SigDigger
+        try "Cloning sigutils (${BRANCH})..."          git clone --recurse-submodules -b master https://github.com/sultanqasim/sigutils
+        try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasimsuscan
+        try "Cloning SuWidgets (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasim/SuWidgets
+        try "Cloning SigDigger (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasim/SigDigger
         try "Creating builddirs..."        mkdir -p sigutils/build suscan/build
         cd sigutils/build
         try "Running CMake (sigutils)..."  cmake .. -DCMAKE_INSTALL_PREFIX="$DEPLOYROOT/usr" -DPKGVERSION="$PKGVERSION" -DCMAKE_BUILD_TYPE=$CMAKE_BUILDTYPE "$CMAKE_EXTRA_OPTS" -DCMAKE_SKIP_RPATH=ON -DCMAKE_SKIP_INSTALL_RPATH=ON
