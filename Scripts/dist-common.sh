@@ -282,7 +282,7 @@ function build()
 
 	# The latest sigutils is now on master
         try "Cloning sigutils (${BRANCH})..."          git clone --recurse-submodules -b master https://github.com/sultanqasim/sigutils
-        try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasimsuscan
+        try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasim/suscan
         try "Cloning SuWidgets (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasim/SuWidgets
         try "Cloning SigDigger (${BRANCH})..."         git clone --recurse-submodules -b "$BRANCH" https://github.com/sultanqasim/SigDigger
         try "Creating builddirs..."        mkdir -p sigutils/build suscan/build
