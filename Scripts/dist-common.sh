@@ -38,7 +38,7 @@ if [ "x$PKGVERSION" == "x" ]; then
 fi
 
 if [ "x$BRANCH" == "x" ]; then
-    BRANCH=thin-client
+    BRANCH=feature/thin-client
 fi
 
 if [ "x$BUILDTYPE" == "x" ]; then
