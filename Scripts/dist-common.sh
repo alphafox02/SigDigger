@@ -287,7 +287,7 @@ function build()
         try "Cloning sigutils (master)..."          git clone --recurse-submodules https://github.com/BatchDrake/sigutils
         try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b feature/thin-client https://github.com/BatchDrake/suscan
         try "Cloning SuWidgets (master)..."      git clone --recurse-submodules https://github.com/BatchDrake/SuWidgets
-        try "Cloning SigDigger (${BRANCH})..."      git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/SigDigger
+        try "Cloning SigDigger (${BRANCH})..."      git clone --recurse-submodules -b feature/thin-client https://github.com/BatchDrake/SigDigger
         try "Creating builddirs..."        mkdir -p sigutils/build suscan/build
         cd sigutils/build
         try "Running CMake (sigutils)..."  cmake .. -DCMAKE_INSTALL_PREFIX="$DEPLOYROOT/usr" -DPKGVERSION="$PKGVERSION" -DCMAKE_BUILD_TYPE=$CMAKE_BUILDTYPE "$CMAKE_EXTRA_OPTS" -DCMAKE_SKIP_RPATH=ON -DCMAKE_SKIP_INSTALL_RPATH=ON
