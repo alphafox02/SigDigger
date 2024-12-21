@@ -38,7 +38,7 @@ if [ "x$PKGVERSION" == "x" ]; then
 fi
 
 if [ "x$BRANCH" == "x" ]; then
-    BRANCH=master
+    BRANCH=thin-client
 fi
 
 if [ "x$BUILDTYPE" == "x" ]; then
@@ -285,8 +285,8 @@ function build()
 
 	# The latest sigutils is now on master
         try "Cloning sigutils (master)..."          git clone --recurse-submodules https://github.com/BatchDrake/sigutils
-        try "Cloning suscan (master)..."            git clone --recurse-submodules https://github.com/BatchDrake/suscan
-        try "Cloning SuWidgets (${BRANCH})..."      git clone --recurse-submodules https://github.com/BatchDrake/SuWidgets
+        try "Cloning suscan (${BRANCH})..."            git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/suscan
+        try "Cloning SuWidgets (master)..."      git clone --recurse-submodules https://github.com/BatchDrake/SuWidgets
         try "Cloning SigDigger (${BRANCH})..."      git clone --recurse-submodules -b "$BRANCH" https://github.com/BatchDrake/SigDigger
         try "Creating builddirs..."        mkdir -p sigutils/build suscan/build
         cd sigutils/build
